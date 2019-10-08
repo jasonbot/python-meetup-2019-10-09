@@ -2,7 +2,7 @@
 
 theme: "white"
 title: "Preparing for Microservices"
-transition: "none"
+transition: "fade"
 transitionSpeed: "fast"
 highlightTheme: "github"
 
@@ -16,6 +16,13 @@ _(I'm hireable!)_
 
 ---
 
+## Microservices are (_largely_) equated with "modern" web architecture best practices
+
+* You can take the parts you like from this and apply them to what you've already got
+* edge routing, service discovery, formal tool-specified specified interfaces, data store isolation are all associated with microservices but you can use them anywhere
+
+---
+
 ## The Unix philosophy
 
 * Small tools, interconnected by pipes
@@ -26,7 +33,18 @@ _(I'm hireable!)_
 ## Microservices
 
 * Small pieces, interconnected by interfaces
-* Separation of concerns 
+* Separation of concerns
+
+---
+
+| Monolith | Microservice |
+| --- | --- |
+| Same process space/permissions | Own process space/permissions |
+| Redeploying the entire world | Redeploying small components |
+| Touching a route touches _everything_ | Touching a route touches only one component |
+| Horizonally scaling scales _everything_ | Horizontally scaling à la carte |
+| One programming language | Multiple programming languages |
+| Encourages one stop shopping | Encourages layers |
 
 ---
 
@@ -102,6 +120,7 @@ _(I'm hireable!)_
   * Traefik, OpenResty, Envoy
 * Separation of concerns
   * TLS or HTTP2 not on your service
+  * Changes to routes/policies don't require service redeploys
 
 ---
 
