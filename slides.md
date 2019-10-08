@@ -12,6 +12,12 @@ highlightTheme: "github"
 
 Jason Scheirer
 
+| | | 
+| --- | --- |
+| GH: | https://github.com/jasonbot |
+| Web: | https://www.jasonscheirer.com |
+| Slides: | https://git.io/JeW41 |
+
 _(I'm hireable!)_
 
 ---
@@ -139,6 +145,15 @@ routes:
         route:
             cluster: service3
 ```
+
+---
+
+## What can we take away from this?
+
+* Two sub-services (`/api/v1/service1` and `/api/v1/service2`) talk to `service1`
+  * Forklifting
+* It all looks like one single cohesive set of routes to the outside world
+* If `service1` has `/internal/v1/service` it's hidden from the outside world but consumable in your cluster
 
 ---
 
