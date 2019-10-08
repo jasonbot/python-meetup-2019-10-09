@@ -1,6 +1,7 @@
 ---
 
-theme: "white"
+theme: "White"
+customTheme : "style-tweaks"
 title: "Preparing for Microservices"
 transition: "fade"
 transitionSpeed: "fast"
@@ -134,6 +135,8 @@ _(I'm hireable!)_
 
 ---
 
+Excerpt from an Envoy Config 
+
 ```yaml
 routes:
     - match:
@@ -155,9 +158,9 @@ routes:
 ## What can we take away from this?
 
 * Two sub-services (`/api/v1/service1` and `/api/v1/service2`) talk to `service1`
-  * Forklifting
+  * Forklifting in action
 * It all looks like one single cohesive set of routes to the outside world
-* If `service1` has `/internal/v1/service` it's hidden from the outside world but consumable in your cluster
+* If `service1` has `/internal/v1/service` it's hidden from the outside world but consumable in your infrastructure
 
 ---
 

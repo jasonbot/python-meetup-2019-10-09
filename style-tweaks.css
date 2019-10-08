@@ -1,0 +1,4 @@
+/* Does a thick black border around diagrams by default: ugly. */
+.reveal img {
+    border: none !important;
+}
