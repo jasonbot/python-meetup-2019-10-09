@@ -80,12 +80,14 @@ _(I'm hireable!)_
 * Think in terms of shared behavior handled by cooperating machines
 * Networked endpoints, not local APIs
 * Swagger and gRPC are formal environments to do this
+* Individual services talk communicate via interfaces; find each other via service discovery
 
 ---
 
 ## Not everything Is An HTTP Endpoint
 
 * Long-running tasks
+* Pub/sub producers/workers
 * Streaming via Websockets/HTTP2/gRPC/Message Buses
 
 ---
@@ -127,10 +129,17 @@ _(I'm hireable!)_
 ## Untangle the Ball of Yarn: Get Behind the Edge
 
 * Use an edge proxy to get into your services from the internet
-  * Traefik, OpenResty, Envoy
+  * Traefik, Kong, OpenResty, Envoy
 * Separation of concerns
-  * TLS or HTTP2 not on your service
+  * TLS or HTTP2 outside of your services simplifies implementation
   * Changes to routes/policies don't require service redeploys
+
+---
+
+## Edge Routing: Proxying++
+  * You can run code at the edge
+  * Do things like authentication in a uniform way
+  * Whitelist/blacklist malicious headers
 
 ---
 
