@@ -30,7 +30,7 @@ _(I'm hireable!)_
 
 ---
 
-## The Unix philosophy
+## The Unix Philosophy
 
 * Small tools, interconnected by pipes
 * Separation of concerns
@@ -67,7 +67,7 @@ _(I'm hireable!)_
 
 ---
 
-## Microservices = lightweight
+## Microservices = Lightweight
 
 * Make them easy to spin up/down
 * Create a cookiecutter template for a bare minimum functional service
@@ -75,19 +75,7 @@ _(I'm hireable!)_
 
 ---
 
-# Moving to Microservices
-
----
-
-## Just because it's popular doesn't mean it's right for you
-
----
-
-## It's okay to have a monolith
-
----
-
-## Interfaces, not entry points
+## Interfaces, Not Entry Points
 
 * Think in terms of shared behavior handled by cooperating machines
 * Networked endpoints, not local APIs
@@ -98,8 +86,19 @@ _(I'm hireable!)_
 ## Not everything Is An HTTP Endpoint
 
 * Long-running tasks
-* Streaming via Websockets/HTTP2/gRPC
-* Message busses
+* Streaming via Websockets/HTTP2/gRPC/Message Buses
+
+---
+
+# Moving to Microservices
+
+---
+
+## Just Because It's Popular Doesn't Mean It's Right For You
+
+---
+
+## It's Okay to Have a Monolith
 
 ---
 
@@ -117,7 +116,7 @@ _(I'm hireable!)_
 
 ---
 
-## Untangle the Ball of Yarn: Make a new ball
+## Untangle the Ball of Yarn: Make a New Ball
 
 * Find a piece of new functionality you want to spec out and make it a service
 * Consume it via a client in your monolith and vice-versa  via your interfaces
