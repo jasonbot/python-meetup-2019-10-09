@@ -22,7 +22,7 @@ _(I'm hireable!)_
 
 ---
 
-## Microservices are (_largely_) equated with "modern" web architecture best practices
+## Microservices Are (_Largely_) Equated with "Modern" Web Architecture Best Practices
 
 * You can take the parts you like from this and apply them to what you've already got
 * edge routing, service discovery, formal tool-specified specified interfaces, data store isolation are all associated with microservices but you can use them anywhere
@@ -56,9 +56,13 @@ _(I'm hireable!)_
 
 ## A Typical "Fat" App Setup
 
+![monolith](monolith.svg)
+
 ---
 
 ## A Typical Microservice Setup
+
+![monolith](microservice.svg)
 
 ---
 
