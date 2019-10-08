@@ -154,12 +154,21 @@ routes:
 
 ---
 
-## What can we take away from this?
+## What Can We Take Away From This?
 
 * Two sub-services (`/api/v1/service1` and `/api/v1/service2`) talk to `service1`
   * Forklifting in action
 * It all looks like one single cohesive set of routes to the outside world
 * If `service1` has `/internal/v1/service` it's hidden from the outside world but consumable in your infrastructure
+
+---
+
+## So
+
+* Small parts, intelligently connected
+* Interfaces based on grouped functionality
+* You move gradually and take it piecemeal
+* Present a cohesive whole to the world
 
 ---
 
