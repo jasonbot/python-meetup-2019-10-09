@@ -51,7 +51,6 @@ _(I'm hireable!)_
 | Touching a route touches _everything_ | Touching a route touches only one component |
 | Horizonally scaling scales _everything_ | Horizontally scaling à la carte |
 | One programming language | Multiple programming languages |
-| Encourages one stop shopping | Encourages layers |
 
 ---
 
@@ -63,7 +62,7 @@ _(I'm hireable!)_
 
 ## A Typical Microservice Setup
 
-![monolith](microservice.svg)
+![microservice](microservice.svg)
 
 ---
 
@@ -110,19 +109,20 @@ _(I'm hireable!)_
 
 ## Untangle the Ball of Yarn: Find the Big Knots
 
-* If you have a legacy app, circular dependencies and weird crufty bits become apparent quickly
 * Pick a small piece at a time and forklift it out
 * Consume your views via a client rather than calling them directly or using their underlying data stores
 * Going polyglot _can_ keep you honest
-  * For example, Django models with lots of custom behavior won't interoperate with a Go service
+  * Helps find pain points/language-specific "magic"
+* I've done this going from Node to Go
 
 ---
 
 ## Untangle the Ball of Yarn: Make a New Ball
 
 * Find a piece of new functionality you want to spec out and make it a service
-* Consume it via a client in your monolith and vice-versa  via your interfaces
+* Consume it via a client in your monolith and vice-versa via your interfaces
 * You now have a prototype for moving legacy code to microservices (or not)
+* I've done this going from Django to Flask
 
 ---
 
@@ -174,10 +174,12 @@ routes:
 
 ## So
 
-* Small parts, intelligently connected
-* Interfaces based on grouped functionality
-* You move gradually and take it piecemeal
-* Present a cohesive whole to the world
+* You don't need to go all in
+* Microservices speed up development and deployment
+  * Smaller parts: smaller footprints, less fear, smaller/more frequent deploys
+* Try: write new functionality as new microservices
+* Also try: move existing functionality out part-by-part to microservices
+* Make it possible to transparently swap out old stuff with the new
 
 ---
 
